@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from "next/image";
 import {Navigation} from "../components/nav/Navigation"
-import Link from "next/link";
+import 'material-icons/iconfont/material-icons.css';
 
 
 export default function Login() {
@@ -42,10 +42,73 @@ export default function Login() {
                         </div>
                     </div>
                 </div>
+                <div>
+                    <article className={"mr-auto ml-auto flex flex-wrap mt-10 max-w-4xl"}>
+                        <section className={'flex border-l-2 border-main-red mr-16 mb-6 shadow rounded w-fit w-96'}>
+                            <Image className={"w-10 h-10 object-cover "} src={"/car.png"} alt={"car icon"} width={550} height={425}/>
+                            <h3 className={"text-lg mt-auto mb-auto underline ml-3"}>Race team 1</h3>
+                            <div className={"mt-auto mb-auto ml-3"}>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star_half</span>
+                            </div>
+                            <button className={"btn-red"}>X1.5</button>
+                        </section>
+                        <section className={'flex border-l-2 border-main-red mr-16 mb-6 shadow rounded w-fit w-96'}>
+                            <Image className={"w-10 h-10 object-cover "} src={"/car.png"} alt={"car icon"} width={550} height={425}/>
+                            <h3 className={"text-lg mt-auto mb-auto underline ml-3"}>Race team 1</h3>
+                            <div className={"mt-auto mb-auto ml-3"}>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star_half</span>
+                            </div>
+                            <button className={"btn-red"}>X1.5</button>
+                        </section>
+                        <section className={'flex border-l-2 border-main-red mr-16 mb-6 shadow rounded w-fit w-96'}>
+                            <Image className={"w-10 h-10 object-cover "} src={"/car.png"} alt={"car icon"} width={550} height={425}/>
+                            <h3 className={"text-lg mt-auto mb-auto underline ml-3"}>Race team 1</h3>
+                            <div className={"mt-auto mb-auto ml-3"}>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star_half</span>
+                            </div>
+                            <button className={"btn-red"}>X1.5</button>
+                        </section>
+                        <section className={'flex border-l-2 border-main-red mr-16 mb-6 shadow rounded w-fit w-96'}>
+                            <Image className={"w-10 h-10 object-cover "} src={"/car.png"} alt={"car icon"} width={550} height={425}/>
+                            <h3 className={"text-lg mt-auto mb-auto underline ml-3"}>Race team 1</h3>
+                            <div className={"mt-auto mb-auto ml-3"}>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star_half</span>
+                            </div>
+                            <button className={"btn-red"}>X1.5</button>
+                        </section>
+                        <section className={'flex border-l-2 border-main-red mr-16 mb-6 shadow rounded w-fit w-96'}>
+                            <Image className={"w-10 h-10 object-cover "} src={"/car.png"} alt={"car icon"} width={550} height={425}/>
+                            <h3 className={"text-lg mt-auto mb-auto underline ml-3"}>Race team 1</h3>
+                            <div className={"mt-auto mb-auto ml-3"}>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star</span>
+                                <span className="material-icons">star_half</span>
+                            </div>
+                            <button className={"btn-red"}>X1.5</button>
+                        </section>
 
 
+                    </article>
 
-
+                </div>
 
             </main>
 
