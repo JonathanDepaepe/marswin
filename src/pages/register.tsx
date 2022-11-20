@@ -25,7 +25,7 @@ export default function Login() {
                             <input className={"bg-gray-50 mb-3 text-black border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-slate-50 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"} type="password" placeholder={"Password"}/>
                             <input className={"bg-gray-50 mb-3 text-black border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-slate-50 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"} type="password" placeholder={"Confirm Password"}/>
                             <input className={"m-1  mr-5 ml-5 btn-red rounded-lg"} type="submit" value={"Register"}/>
-                            <Link className={"ml-auto mr-auto text-black underline mb-3"} href={"/login"}>Already account ?</Link>
+                            <Link className={"ml-auto mr-auto text-black underline mb-3"} href={"/login"}>Already account?</Link>
 
                         </form>
                     </div>
