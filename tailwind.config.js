@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       width: {
         'main-stretch': '75%',
-        'main-page-stretch': '60%'
+        'main-page-stretch': '60%',
+        '128': '50rem'
       },
       colors: {
         'main-red': '#e6635e',
