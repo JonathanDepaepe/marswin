@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./node_modules/flowbite-react/**/*.js",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -11,6 +10,9 @@ module.exports = {
         'main-stretch': '75%',
         'main-page-stretch': '60%',
         '128': '50rem'
+      },
+      minWidth: {
+        '96': '24rem'
       },
       colors: {
         'main-red': '#e6635e',
@@ -27,5 +29,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require("flowbite/plugin")],
+  plugins: [require('@tailwindcss/typography')],
 }

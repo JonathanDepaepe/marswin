@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from "next/image";
 import {Navigation} from "../components/nav/Navigation"
+import Link from "next/link";
+// @ts-ignore
+import {withIronSession} from "next-iron-session";
 
-
-export default function Home() {
+// @ts-ignore
+export default function Home({user}) {
     return (
         <>
             <Head>
@@ -11,7 +14,7 @@ export default function Home() {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
             </Head>
             <header>
-                <Navigation/>
+                <Navigation user={user}/>
             </header>
             <main>
                 <div className={'flex justify-around'}>
@@ -19,7 +22,8 @@ export default function Home() {
                     <div className={'flex flex-col mt-auto mb-auto'}>
                         <h1 className={"text-5xl mb-2"}>Mars Win</h1>
                         <p className={"mb-7"} >  Race your money to the top!</p>
-                        <a className={"btn-red mr-auto ml-auto"} href="/bet">Get started</a>
+
+                        <Link className={"btn-red mr-auto ml-auto"} href="/bet">Get started</Link>
                     </div>
                 </div>
                 <div className={'flex justify-around mt-10 mr-10 ml-20'}>
@@ -36,3 +40,26 @@ export default function Home() {
         </>
     )
 }
+
+export const getServerSideProps = withIronSession(// @ts-ignore
+    async ({ req, res }) => {
+        const user = req.session.get("user");
+
+        if (!user) {
+            res.statusCode = 404;
+            res.end();
+            return { props: {} };
+        }
+
+        return {
+            props: { user }
+        };
+    },
+    {
+        cookieName: "MYSITECOOKIE",
+        cookieOptions: {
+            secure: process.env.NODE_ENV === "production" ? true : false
+        },
+        password: "123456789101121311415161718162loljiogfhdfgdfghgfsddf"
+    }
+);
