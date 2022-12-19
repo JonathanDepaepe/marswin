@@ -10,14 +10,18 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.7",
+    "formik": "^2.2.9",
     "material-icons": "^1.12.2",
     "next": "13.0.0",
+    "next-auth": "^4.18.0",
     "next-images": "^1.8.4",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-tooltip": "^4.5.0",
-    "sass": "^1.55.0"
+    "reactjs-popup": "^2.0.5",
+    "sass": "^1.55.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "18.11.7",

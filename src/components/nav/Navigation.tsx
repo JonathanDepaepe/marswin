@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { DarkModeSelector } from "./DarkModeSelector";
+import 'material-icons/iconfont/material-icons.css';
+import { useSession } from 'next-auth/react';
+
 
 export const Navigation = () => {
+    const { data: session } = useSession();
+
     return (
         <>
             <nav className={'flex flex-row items-center justify-between w-main-stretch mx-auto mt-8 mb-14'}>
@@ -12,7 +17,14 @@ export const Navigation = () => {
             </div>
                 <div className={'flex flex-row items-center'}>
                 <DarkModeSelector/>
-                <Link className={'btn-red hover:underline'} href={'/login'}>Login / Register</Link>
+                    {session?.user?.name ?
+                        <Link className="border border p-1 border-main-red rounded mr-4 flex" href="/profile"><span className=" mt-auto mb-auto mr-1 material-icons-outlined">paid</span><p className={"mt-auto mb-auto"}>{session?.user?.email}</p></Link> :
+                        <></>
+                    }
+                    {session?.user?.name ?
+                        <Link className={'btn-red hover:underline'} href={'/profile'}>{session?.user?.name}</Link> :
+                        <Link className={'btn-red hover:underline'} href={'/login'}>Login / Register</Link>
+                    }
                 </div>
             </nav>
         </>
